@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permainan Edukasi SD</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #ffb703;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+      text-shadow: 2px 2px #d97706;
+    }
+
+    .container {
+      background: #fff8dc;
+      border-radius: 20px;
+      padding: 20px;
+      margin-top: 40px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      border: 3px solid #ffb703;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #fb8500;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff6700;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: #023047;
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎮 Permainan Edukasi SD 🎓</h1>
+    <p>Belajar sambil bermain dengan Wordwall!</p>
+  </header>
+
+  <div class="container">
+    <h2>🔢 Tebak Jawaban yang Benar!</h2>
+    <p>Klik tombol di bawah untuk mulai bermain 👇</p>
+    <button onclick="showGame()">Mulai Permainan</button>
+    
+    <div id="gameArea" style="display:none;">
+      <iframe 
+        src="https://wordwall.net/embed/10f31db225754ee1a594395b6a7011d3?themeId=65&templateId=5&fontStackId=12" 
+        allowfullscreen
+        frameborder="0">
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 - Kelas Pintar SD | Dibuat dengan ❤️ untuk belajar menyenangkan</p>
+  </footer>
+
+  <script>
+    function showGame() {
+      document.getElementById("gameArea").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
